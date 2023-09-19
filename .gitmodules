@@ -1,0 +1,3 @@
+[submodule "CodeForces"]
+	path = CodeForces
+	url = git@github.com:WasikAhmed/CodeForces.git
