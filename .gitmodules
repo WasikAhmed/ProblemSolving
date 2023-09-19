@@ -1,3 +1,6 @@
 [submodule "CodeForces"]
 	path = CodeForces
 	url = git@github.com:WasikAhmed/CodeForces.git
+[submodule "LeetCode"]
+	path = LeetCode
+	url = git@github.com:WasikAhmed/LeetCode.git
