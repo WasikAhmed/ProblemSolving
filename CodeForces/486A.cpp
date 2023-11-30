@@ -1,16 +1,21 @@
 // Calculating Function
 
 #include <iostream>
-#include <cmath>
 using namespace std;
+
+#define ll long long
 
 int main()
 {
     int n; cin>> n;
 
-    int ans = 0;
+    ll ans = 0;
     for(int i=1; i<=n; i++) {
-        ans += pow(-1, i) * i;
+        if(i % 2 == 0) {
+            ans += i;
+        } else {
+            ans -= i;
+        }
     }
     cout<< ans<< endl;
 
