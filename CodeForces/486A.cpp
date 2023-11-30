@@ -7,15 +7,13 @@ using namespace std;
 
 int main()
 {
-    int n; cin>> n;
+    ll n; cin>> n;
 
     ll ans = 0;
-    for(int i=1; i<=n; i++) {
-        if(i % 2 == 0) {
-            ans += i;
-        } else {
-            ans -= i;
-        }
+    if(n % 2 == 0) {
+        ans = n / 2;
+    } else {
+        ans = ((n+1)/2) * (-1);
     }
     cout<< ans<< endl;
 
