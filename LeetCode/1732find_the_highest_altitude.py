@@ -1,13 +1,13 @@
 class Solution:
     def largestAltitude(self, gain):
-        n = len(gain)
+        max = 0
+        a = 0
 
-        prefix_sum = [0] * (n + 1)
-
-        for i in range(n):
-            prefix_sum[i + 1] = prefix_sum[i] + gain[i]
-
-        return max(prefix_sum)
+        for i in gain:
+            a+=i
+            if a > max:
+                max = a
+        return max
 
 
 s = Solution()
