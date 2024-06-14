@@ -1,4 +1,4 @@
-### Faster Input Methods in Python
+### Faster Input and Output Methods in Python
 
 import sys
 
@@ -6,27 +6,28 @@ import sys
 ## Taking integer as input
 
 # input = sys.stdin.readline().strip()
-#
 # n = int(input)
-# print(n, type(n))
+#
+# sys.stdout.write(f'{n}, {type(n)}')
+# sys.stdout.flush()
 
 ## Type 2:
 ## Taking string as input
 
 # input = sys.stdin.readline().strip()
-#
 # s = input
-# print(s, type(s))
+#
+# sys.stdout.write(f'{s}, {type(s)}')
+# sys.stdout.flush()
 
 ## Type 3:
 ## a b c
 ## 1 2 3
 
 # input = sys.stdin.readline().strip()
-#
 # a, b, c = map(int, input.split())
-# print(a, b, c)
-# print(type(a), type(b), type(c))
+#
+# sys.stdout.write(f'{a}, {b}, {c}')
 
 ## Type 4:
 ## a b c d e...
@@ -35,7 +36,8 @@ import sys
 # input = sys.stdin.readline().strip()
 # arr = list(map(int, input.split()))
 #
-# print(arr)
+# sys.stdout.write(''.join(map(str, arr)) + '\n')
+# sys.stdout.write('\n'.join(map(str, arr)) + '\n')
 
 ## Type 5:
 ## 5
@@ -44,8 +46,8 @@ import sys
 # n = int(sys.stdin.readline().strip())
 # arr = list(map(int, sys.stdin.readline().strip().split()))
 #
-# print(n, arr, sep='\n')
-
+# sys.stdout.write(f'{n}\n')
+# sys.stdout.write(' '.join(map(str, arr)))
 
 ## Type 6:
 ## 3 -> no. of inputs
@@ -54,10 +56,10 @@ import sys
 ## 3
 
 # t = int(sys.stdin.readline().strip())
-# print(t)
+# sys.stdout.write(f'{t}')
 # for i in range(t):
 #     n = int(sys.stdin.readline().strip())
-#     print(n)
+#     sys.stdout.write(f'{n}')
 # do operations...
 
 
@@ -69,12 +71,12 @@ import sys
 ## 1 2 3 4 5
 
 # t = int(sys.stdin.readline().strip())
-# print(t)
+# sys.stdout.write(f'{t}')
 # for i in range(t):
 #     n = int(sys.stdin.readline().strip())
-#     print(n)
+#     sys.stdout.write(f'{n}')
 #     arr = list(map(int, sys.stdin.readline().strip().split()))
-#     print(arr)
+#     sys.stdout.write(' '.join(map(str, arr)))
 # do operations...
 
 
@@ -86,8 +88,8 @@ import sys
 ## 13 14 15 16
 
 # t = int(sys.stdin.readline().strip())
-# print(t)
+# sys.stdout.write(f'{t}')
 # for i in range(t):
 #     arr = list(map(int, sys.stdin.readline().strip().split()))
-#     print(arr)
+#     sys.stdout.write(' '.join(map(str, arr)))
 # do operations...
