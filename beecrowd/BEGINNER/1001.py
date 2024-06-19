@@ -1,3 +1,5 @@
 # Extremely Basic
+import sys
 
-print(f'X = {int(input()) + int(input())}')
+input = sys.stdin.read().strip().split()
+sys.stdout.write(f'X = {int(input[0]) + int(input[1])}\n')

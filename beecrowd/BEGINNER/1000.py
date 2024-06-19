@@ -1,4 +1,4 @@
 # Hello World!
 import sys
 
-sys.stdout.write('Hello World!')
+sys.stdout.write('Hello World!\n')
