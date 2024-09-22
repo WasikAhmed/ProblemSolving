@@ -12,17 +12,25 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not head:
-            return None
+        # if not head:
+        #     return None
+        #
+        # hashset = set()
+        # hashset.add(head.val)
+        # curr = head
+        #
+        # while curr.next is not None:
+        #     if curr.next.val in hashset:
+        #         curr.next = curr.next.next
+        #     else:
+        #         hashset.add(curr.next.val)
+        #         curr = curr.next
+        # return head
 
-        hashset = set()
-        hashset.add(head.val)
         curr = head
-
-        while curr.next is not None:
-            if curr.next.val in hashset:
+        while curr and curr.next:
+            if curr.val == curr.next.val:
                 curr.next = curr.next.next
             else:
-                hashset.add(curr.next.val)
                 curr = curr.next
         return head
